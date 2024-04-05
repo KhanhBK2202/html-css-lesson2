@@ -5,7 +5,7 @@ import styles from './Dropdown.module.css'
 function Dropdown(props) {
     return (
         <>
-            {props.items.map((item, idx) => (
+            {props.items?.map((item, idx) => (
                 <div key={idx} className={styles.wrapper}>
                     <div className={styles.dropdownItem}>
                         {item.name} &nbsp;
