@@ -18,6 +18,7 @@
 
 .dropdown {
     display: flex;
+    z-index: 5;
 }
 
 .contactBtn {
@@ -26,6 +27,11 @@
     padding: 4px 12px;
     font-size: 14px;
     cursor: pointer;
+}
+
+.contactBtn:hover {
+    background-color: var(--secondary-color);
+    color: white;
 }
 
 .toggleBtn {
@@ -57,9 +63,9 @@
     right: 0;
     width: 100%;
     height: max-content;
-    z-index: 4;
     display: none;
     padding: 10px 25px;
+    z-index: 5;
 }
 
 .navbarMenuList {
@@ -109,7 +115,6 @@
 
 /* Tablet (width >= 740px & width < 1024px) */
 @media only screen and (min-width: 740px) and (max-width: 1023px) {
-
 }
 
 /* Mobile (width < 740px) */

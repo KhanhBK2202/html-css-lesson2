@@ -28,7 +28,26 @@
 
 /* Mobile (width < 740px) */
 @media only screen and (max-width: 739px) {
+
     .footer {
         padding: 10px var(--padding-content);
+    }
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(90deg);
+    }
+}
+
+@keyframes rotationBack {
+    0% {
+        transform: rotate(90deg);
+    }
+    100% {
+        transform: rotate(0deg);
     }
 }

@@ -26,6 +26,7 @@ const dropdownItems = [
         isDrop: false,
     },
 ]
+
 function Header() {
     const [isChecked, setIsChecked] = useState(false)
     const checkHandler = () => {
@@ -41,6 +42,10 @@ function Header() {
             barIcon.classList.remove(styles.active)
         }
     }, [isChecked])
+
+    // useEffect(() => {
+    //     localStorage.setItem('isChecked', isChecked)
+    // }, [isChecked])
 
     return (
         <div className={styles.header}>

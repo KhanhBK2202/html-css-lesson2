@@ -1,24 +1,19 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import styles from './App.module.css'
-import Card from './components/Card'
-import Dropdown from './components/Dropdown'
-import {
-    faLifeRing,
-    faLaptop,
-    faHeadset,
-    faGear,
-    faShareNodes,
-    faUsersViewfinder,
-    faBars,
-} from '@fortawesome/free-solid-svg-icons'
-import { useEffect, useState } from 'react'
-import { faFacebook, faYoutube } from '@fortawesome/free-brands-svg-icons'
 import Header from './components/Header'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { publicRoutes } from './routes'
 import Footer from './components/Footer'
+import { useEffect, useRef, useState } from 'react'
 
+// let tempRef
 function App() {
+    // const vid = useRef()
+    // const tempRef = useRef()
+    // const [isClicked, setIsClicked] = useState()
+    // useEffect(() => {
+    //     console.log(vidRef)
+    //     // console.log(isClicked)
+    // }, [])
 
     return (
         <div className={styles.app}>
