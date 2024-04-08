@@ -1,6 +1,7 @@
 .content {
     padding: 40px 100px;
     margin-top: var(--header-height);
+    overflow-x: hidden; /* to fix animation bug */
 }
 .mainContent {
     display: flex;
@@ -101,7 +102,7 @@
         font-size: 26px;
     }
     .cards {
-        grid-template-columns: repeat(1, minmax(0, 1fr));
+        grid-template-columns: auto;
     }
 }
 

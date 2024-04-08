@@ -61,6 +61,7 @@
     background-color: var(--primary-color);
     top: 60px;
     right: 0;
+    left: 0;
     width: 100%;
     height: max-content;
     display: none;
@@ -130,19 +131,19 @@
 }
 
 @keyframes rotation {
-    0% {
+    from {
         transform: rotate(0deg);
     }
-    100% {
+    to {
         transform: rotate(90deg);
     }
 }
 
 @keyframes rotationBack {
-    0% {
+    from {
         transform: rotate(90deg);
     }
-    100% {
+    to {
         transform: rotate(0deg);
     }
 }
