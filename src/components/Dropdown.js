@@ -1,6 +1,6 @@
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import styles from './Dropdown.module.css'
+import styles from './style.module.css'
 
 function Dropdown(props) {
     return (

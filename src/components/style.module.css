@@ -1,0 +1,270 @@
+/* Header */
+.header {
+    position: fixed;
+    top: 0;
+    display: flex;
+    background-color: var(--primary-color);
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 55px;
+    height: var(--header-height);
+    width: 100%;
+    z-index: 5;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.dropdown {
+    display: flex;
+    z-index: 5;
+}
+
+.contactBtn {
+    border-radius: 8px;
+    background-color: white;
+    padding: 4px 12px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.contactBtn:hover {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.toggleBtn {
+    display: none;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.icon {
+    color: #fff;
+    font-size: 25px;
+}
+
+/* Navbar responsive */
+.navbarOverlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+    z-index: 3;
+}
+
+.navbarMenu {
+    position: fixed;
+    background-color: var(--primary-color);
+    top: 60px;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: max-content;
+    display: none;
+    padding: 10px 25px;
+    z-index: 5;
+}
+
+.navbarMenuList {
+    margin: 10px 0;
+    padding: 0 25px;
+    text-align: center;
+}
+
+.active {
+    animation: rotation 0.3s linear;
+    animation-fill-mode: forwards;
+}
+
+.inactive {
+    animation: rotationBack 0.3s linear;
+    animation-fill-mode: forwards;
+}
+
+.navbarInput {
+    display: none;
+}
+
+.navbarInput:checked ~ .navbarOverlay {
+    display: block;
+}
+
+.navbarInput:checked ~ .navbarMenu {
+    display: block;
+}
+
+.contactBtnNavbar {
+    border-radius: 8px;
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 4px 12px;
+    font-size: 14px;
+    cursor: pointer;
+    width: max-content;
+}
+
+/* Footer */
+.footer {
+    position: absolute;
+    bottom: 0;
+    border-top: 1px solid grey;
+    width: 100%;
+    display: flex;
+    padding: 10px 100px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.media {
+    cursor: pointer;
+}
+
+.contactLink {
+    font-size: 12px;
+    cursor: pointer;
+}
+
+/* Dropdown */
+.wrapper {
+    position: relative;
+    cursor: pointer;
+}
+
+.wrapper:hover .dropdownItem {
+    color: var(--secondary-color);
+}
+
+.dropdownItem {
+    color: white;
+    display: flex;
+    align-items: center;
+    margin: 15px 11px;
+    justify-content: space-between;
+}
+
+.wrapper:hover .options {
+    transform: translate(0, 8px);
+    opacity: 1;
+    visibility: visible;
+}
+
+.arrowDown {
+    font-size: 10px;
+}
+
+.options {
+    border: 1px solid white;
+    padding: 16px 22px;
+    background-color: #001e45;
+    position: absolute;
+    left: 12px;
+    top: 20px;
+    width: max-content;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease;
+    z-index: 1;
+}
+
+.options::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 14px;
+    position: absolute;
+    top: -13px;
+    left: 0;
+}
+
+.option {
+    list-style: none;
+    cursor: pointer;
+    color: white;
+    text-align: left;
+    font-size: 14px;
+}
+
+.option:hover {
+    color: var(--secondary-color);
+}
+
+.firstOption {
+    margin: 5px 0;
+    text-decoration: underline;
+}
+
+.otherOption {
+    margin: 5px 0 5px 15px;
+}
+
+/* Card */
+.cardItem {
+    border: 1px solid #dadada;
+    border-radius: 22px;
+    padding: 20px;
+}
+
+.barIcon {
+    font-size: 50px;
+}
+
+.heading {
+    font-weight: 450;
+    text-align: left;
+}
+
+.content {
+    text-align: left;
+    font-size: 12px;
+}
+
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(90deg);
+    }
+}
+
+@keyframes rotationBack {
+    from {
+        transform: rotate(90deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+/* Tablet & Mobile */
+@media only screen and (max-width: 1023px) {
+    .header {
+        padding: var(--padding-content);
+    }
+}
+
+/* Tablet (width >= 740px & width < 1024px) */
+@media only screen and (min-width: 740px) and (max-width: 1023px) {
+}
+
+/* Mobile (width < 740px) */
+@media only screen and (max-width: 739px) {
+    .toggleBtn {
+        display: block;
+    }
+
+    .dropdown,
+    .contactBtn {
+        display: none;
+    }
+
+    .footer {
+        padding: 10px var(--padding-content);
+    }
+}

@@ -1,5 +1,4 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import styles from './Card.module.css'
+import styles from './style.module.css'
 function Card(props) {
     const fadeAnimation = [
         'fade-down-right',
@@ -21,12 +20,8 @@ function Card(props) {
                     }}
                     data-aos={fadeAnimation[idx]}
                 >
-                    <div className={styles.icon}>
+                    <div className={styles.barIcon}>
                         <img src={item.icon} alt="icon" />
-                        {/* <FontAwesomeIcon
-                            icon={item.icon}
-                            style={{ color: idx % 2 === 0 ? 'white' : 'var(--primary-color)' }}
-                        /> */}
                     </div>
                     <h4 className={styles.heading}>{item.heading}</h4>
                     <div className={styles.content}>{item.content}</div>

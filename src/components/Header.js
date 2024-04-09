@@ -1,8 +1,8 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import styles from './Header.module.css'
-import Dropdown from '../Dropdown'
+import styles from './style.module.css'
 import { useEffect, useState } from 'react'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
+import Dropdown from './Dropdown'
 
 const dropdownItems = [
     {
