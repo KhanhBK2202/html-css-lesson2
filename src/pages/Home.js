@@ -1,8 +1,8 @@
-import styles from './Home.module.css'
-import Card from '../../components/Card'
-import { useEffect } from 'react'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
+import { useEffect } from 'react'
+import Card from '../components/Card'
+import '../assets/style/pages.css'
 
 const cardItems = [
     {
@@ -56,12 +56,12 @@ function Home() {
         })
     }, [])
     return (
-        <div className={styles.content}>
-            <div className={styles.mainContent}>
-                <div className={styles.wrapperVideo}>
-                    <div className={styles.contentVideo} data-aos="slide-right">
+        <div className="content">
+            <div className="mainContent">
+                <div className="wrapperVideo">
+                    <div className="contentVideo" data-aos="slide-right">
                         <iframe
-                            className={styles.video}
+                            className="video"
                             src="https://www.youtube.com/embed/rNjUDw5E6tY?autoplay=1&mute=1"
                             title="YouTube video player"
                             frameBorder="0"
@@ -71,12 +71,12 @@ function Home() {
                         ></iframe>
                     </div>
                 </div>
-                <div className={styles.contentText}>
-                    <h1 className={styles.contentHeading} data-aos="fade-down">
+                <div className="contentText">
+                    <h1 className="contentHeading" data-aos="fade-down">
                         Create a Global Support Hub with
-                        <div style={{ color: '#00B9E7' }}>Global Service Desk</div>
+                        <div className="highlightText">Global Service Desk</div>
                     </h1>
-                    <div className={styles.contentParagraph} data-aos="zoom-in">
+                    <div className="contentParagraph" data-aos="zoom-in">
                         We play the roles as the support frontiers and the representatives of the IT
                         support. The Global Service Desk is the center where customers (e.g.
                         employees or other stakeholders) can approach for help from their IT service
@@ -87,21 +87,18 @@ function Home() {
                 </div>
             </div>
 
-            <div className={styles.weDo}>
-                <h1 className={styles.weDoHeading} data-aos="fade-up">
-                    What{' '}
-                    <span style={{ color: 'var(--secondary-color)', margin: '14px 0' }}>
-                        we can do
-                    </span>
+            <div className="weDo">
+                <h1 className="weDoHeading" data-aos="fade-up">
+                    What <span className="highlightText">we can do</span>
                 </h1>
-                <div className={styles.cards}>
+                <div className="cards">
                     <Card items={cardItems} />
                 </div>
             </div>
 
-            <div className={styles.page}>
-                <div className={styles.previousPage}>Previous page</div>
-                <h2 className={styles.pageName}>Quality Assurance</h2>
+            <div className="page">
+                <div className="previousPage">Previous page</div>
+                <h2 className="pageName">Quality Assurance</h2>
             </div>
         </div>
     )

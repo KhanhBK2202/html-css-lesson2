@@ -28,3 +28,76 @@ h2 {
     position: relative;
     min-height: 100vh;
 }
+
+/* Tablet & Mobile */
+@media only screen and (max-width: 1023px) {
+    .header {
+        padding: var(--padding-content);
+    }
+}
+
+/* Tablet (width >= 740px & width < 1024px) */
+@media only screen and (min-width: 900px) and (max-width: 1023px) {
+    .cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media only screen and (min-width: 740px) and (max-width: 899px) {
+    .mainContent {
+        display: block;
+    }
+    .wrapperVideo,
+    .contentText {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .contentHeading {
+        font-size: 26px;
+    }
+    .contentParagraph {
+        font-size: 12px;
+    }
+    .weDoHeading {
+        font-size: 26px;
+    }
+    .cards {
+        grid-template-columns: auto;
+    }
+}
+
+/* Mobile (width < 740px) */
+@media only screen and (max-width: 739px) {
+    /* Header */
+    .toggleBtn {
+        display: block;
+    }
+    .dropdown,
+    .contactBtn {
+        display: none;
+    }
+
+    /* Footer */
+    .footer {
+        padding: 10px var(--padding-content);
+    }
+
+    /* Content */
+    .content {
+        padding: var(--padding-content);
+    }
+    .mainContent {
+        display: block;
+    }
+    .wrapperVideo,
+    .contentText {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .cards {
+        grid-template-columns: auto;
+    }
+    .page {
+        text-align: center;
+    }
+}

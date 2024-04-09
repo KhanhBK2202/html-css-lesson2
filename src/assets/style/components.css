@@ -17,6 +17,10 @@
     align-items: center;
 }
 
+.logoImg {
+    height: calc(var(--header-height) - 10px);
+}
+
 .dropdown {
     display: flex;
     z-index: 5;
@@ -125,7 +129,7 @@
 }
 
 .contactLink {
-    font-size: 12px;
+    font-size: 14px;
     cursor: pointer;
 }
 
@@ -198,6 +202,10 @@
     text-decoration: underline;
 }
 
+.firstOption:hover {
+    text-decoration: none;
+}
+
 .otherOption {
     margin: 5px 0 5px 15px;
 }
@@ -209,6 +217,16 @@
     padding: 20px;
 }
 
+.evenCard {
+    background-color: #001e45;
+    color: white;
+}
+
+.oddCard {
+    background-color: #f3f3f3;
+    color: black;
+}
+
 .barIcon {
     font-size: 50px;
 }
@@ -218,11 +236,10 @@
     text-align: left;
 }
 
-.content {
+.desc {
     text-align: left;
     font-size: 12px;
 }
-
 
 @keyframes rotation {
     from {
@@ -239,32 +256,5 @@
     }
     to {
         transform: rotate(0deg);
-    }
-}
-
-/* Tablet & Mobile */
-@media only screen and (max-width: 1023px) {
-    .header {
-        padding: var(--padding-content);
-    }
-}
-
-/* Tablet (width >= 740px & width < 1024px) */
-@media only screen and (min-width: 740px) and (max-width: 1023px) {
-}
-
-/* Mobile (width < 740px) */
-@media only screen and (max-width: 739px) {
-    .toggleBtn {
-        display: block;
-    }
-
-    .dropdown,
-    .contactBtn {
-        display: none;
-    }
-
-    .footer {
-        padding: 10px var(--padding-content);
     }
 }

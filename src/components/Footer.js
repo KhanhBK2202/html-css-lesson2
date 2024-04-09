@@ -1,14 +1,14 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import styles from './style.module.css'
 import { faFacebook, faYoutube } from '@fortawesome/free-brands-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import '../assets/style/components.css'
 function Footer() {
     return (
-        <div className={styles.footer}>
-            <div className={styles.media}>
+        <div className="footer">
+            <div className="media">
                 <FontAwesomeIcon icon={faFacebook} /> &nbsp; &nbsp;
                 <FontAwesomeIcon icon={faYoutube} />
             </div>
-            <div className={styles.contactLink}>
+            <div className="contactLink">
                 <span>CONTACT US</span> &nbsp; &nbsp;
                 <span>JOIN US</span>
             </div>

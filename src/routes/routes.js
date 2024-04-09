@@ -1,5 +1,4 @@
 import config from '../config'
-
 import Home from '../pages/Home'
 
 const publicRoutes = [
@@ -8,4 +7,4 @@ const publicRoutes = [
 
 const privateRoutes = []
 
-export { publicRoutes, privateRoutes }
+export { privateRoutes, publicRoutes }

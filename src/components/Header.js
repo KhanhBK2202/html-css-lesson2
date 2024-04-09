@@ -1,8 +1,8 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import styles from './style.module.css'
-import { useEffect, useState } from 'react'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { useEffect, useState } from 'react'
 import Dropdown from './Dropdown'
+import '../assets/style/components.css'
 
 const dropdownItems = [
     {
@@ -33,13 +33,13 @@ function Header() {
         setIsChecked(!isChecked)
     }
     useEffect(() => {
-        const barIcon = document.querySelector(`.${styles.icon}`)
+        const barIcon = document.querySelector(".icon")
         if (isChecked) {
-            barIcon.classList.toggle(styles.active)
-            barIcon.classList.remove(styles.inactive)
+            barIcon.classList.toggle("active")
+            barIcon.classList.remove("inactive")
         } else {
-            barIcon.classList.toggle(styles.inactive)
-            barIcon.classList.remove(styles.active)
+            barIcon.classList.toggle("inactive")
+            barIcon.classList.remove("active")
         }
     }, [isChecked])
 
@@ -48,32 +48,36 @@ function Header() {
     // }, [isChecked])
 
     return (
-        <div className={styles.header}>
-            <div className={styles.logo}>
-                <img src="logo.png" alt="logo" />
+        <div className="header">
+            <div className="logo">
+                <img
+                    src={require('../assets/images/logo.png')}
+                    alt="logo"
+                    className="logoImg"
+                />
             </div>
-            <div className={styles.dropdown}>
+            <div className="dropdown">
                 <Dropdown items={dropdownItems} />
             </div>
-            <div className={styles.contactBtn}>Contact Us</div>
+            <div className="contactBtn">Contact Us</div>
 
             {/* Toggle button for responsive */}
-            <div className={styles.toggleBtn}>
-                <label htmlFor="navbar-menu-input" className={styles.toggleBtn}>
-                    <FontAwesomeIcon icon={faBars} className={styles.icon} />
+            <div className="toggleBtn">
+                <label htmlFor="navbar-menu-input" className="toggleBtn">
+                    <FontAwesomeIcon icon={faBars} className="icon" />
                 </label>
                 <input
                     type="checkbox"
                     name=""
-                    className={styles.navbarInput}
+                    className="navbarInput"
                     id="navbar-menu-input"
                     checked={isChecked}
                     onChange={checkHandler}
                 />
 
-                <label htmlFor="navbar-menu-input" className={styles.navbarOverlay}></label>
-                <div className={styles.navbarMenu}>
-                    <div className={styles.contactBtnNavbar}>Contact Us</div>
+                <label htmlFor="navbar-menu-input" className="navbarOverlay"></label>
+                <div className="navbarMenu">
+                    <div className="contactBtnNavbar">Contact Us</div>
                     <Dropdown items={dropdownItems} />
                 </div>
             </div>

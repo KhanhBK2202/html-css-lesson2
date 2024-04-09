@@ -1,3 +1,4 @@
+/* Home */
 .content {
     padding: 40px 100px;
     margin-top: var(--header-height);
@@ -42,6 +43,10 @@
     font-weight: 450;
 }
 
+.highlightText {
+    color: #00b9e7;
+}
+
 .contentParagraph {
     font-size: 14px;
     margin-top: 2px;
@@ -70,63 +75,4 @@
     font-weight: 450;
     margin-bottom: 40px;
     cursor: pointer;
-}
-
-/* Tablet & Mobile */
-@media only screen and (max-width: 1023px) {
-}
-
-/* Tablet (width >= 740px & width < 1024px) */
-@media only screen and (min-width: 900px) and (max-width: 1023px) {
-    .cards {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-}
-
-@media only screen and (min-width: 740px) and (max-width: 899px) {
-    .mainContent {
-        display: block;
-    }
-    .wrapperVideo,
-    .contentText {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-    .contentHeading {
-        font-size: 26px;
-    }
-    .contentParagraph {
-        font-size: 12px;
-    }
-    .weDoHeading {
-        font-size: 26px;
-    }
-    .cards {
-        grid-template-columns: auto;
-    }
-}
-
-/* Mobile (width < 740px) */
-@media only screen and (max-width: 739px) {
-    .content {
-        padding: var(--padding-content);
-    }
-
-    .mainContent {
-        display: block;
-    }
-
-    .wrapperVideo,
-    .contentText {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-
-    .cards {
-        grid-template-columns: auto;
-    }
-
-    .page {
-        text-align: center;
-    }
 }
